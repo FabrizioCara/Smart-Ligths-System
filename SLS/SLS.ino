@@ -14,7 +14,7 @@
 
 int presence[] = {0, 0, 0}; // valori letture sensori pir1, pir2 e pir3
 int transistorList[] = {5, 4, 0}; // lista dei transistor 1, 2 e 3
-float PistList[] = {0 , 227.5, 327.5 , 411}; // P0%, P50%, P80%, P100% mW. Sono le potenze istantanee delle lampade                                       //   <----- Da modificare
+float PistList[] = {0 , 227.5, 327.5 , 411}; // P0%, P50%, P80%, P100% mW. Sono le potenze istantanee delle lampade   <----- Da modificare
 float Pavg[] = {0, 0, 0, 0};
 int PavgLenght = 4; // serve per inviare la Potenza media ogni 15*4=60sec
 bool Soff = 1; // quando vale 1 il sistema è spento
@@ -24,20 +24,20 @@ float lastPavg = 0.0; // serve per salvare l'ultima media delle potenze
 float lastEsav = 0.0; // serve per salvare l'ultima percentuale di energia risparmiata
 float lastPist = 0.0; // serve per salvare l'ultima potenza istantanea
 // --------------- WiFi Variables -------------------
-const char* MY_SSID = "MCLab QoE"; // nome della rete WiFi
-const char* MY_PWD = "qoelablana"; // password della rete WiFi
+const char* MY_SSID = " "; // nome della rete WiFi   <----- Da modificare
+const char* MY_PWD = " "; // password della rete WiFi   <----- Da modificare
 // --------------------------------------------------
 // --------- Thingspeak Variables -------------------
 const char* server = "api.thingspeak.com";
-String apiKey = "3H0QLYWHD0HW0U93"; // chiave in scrittura ThingSpeak
+String apiKey = " "; // chiave in scrittura ThingSpeak   <----- Da modificare
 long TS_lastTime; // da usare con millis per sapere il tempo dell'ultimo dato inviato a ThingSpeak
 int TS_delay = 15000; // delay prima di poter inviare un altro dato a ThingSpeak
-int sendPavgcount = 0; // contatore per l'invio della potenza media                                                       //   <----- Da modificare (anche a riga 274)
+int sendPavgcount = 0; // contatore per l'invio della potenza media
 // --------------------------------------------------
 // --------- Telegram Variables ---------------------
-#define BOTtoken "481855474:AAF8VPoxzyUPqUIM37j2RY2l84xgJi2FZ-M" // chiave del bot Telegram
-#define BOTname "LEDbot" // nome del bot Telegram
-#define BOTusername "LEDLEDbot" // username del bot Telegram
+#define BOTtoken " " // chiave del bot Telegram   <----- Da modificare
+#define BOTname " " // nome del bot Telegram   <----- Da modificare
+#define BOTusername " " // username del bot Telegram   <----- Da modificare
 TelegramBOT bot(BOTtoken, BOTname, BOTusername); // dichiarazione e inizializzazione dell'oggetto bot Telegram
 long Bot_lastTime; // da usare con millis per sapere il tempo dell'ultimo messaggio inviato al bot Telegram
 int Bot_delay = 1000; // delay prima di poter inviare un altro massaggio al bot Telegram
